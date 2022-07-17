@@ -1,7 +1,13 @@
-import { Header } from '../layout';
+import { Footer, Header, Main } from '../layout';
 
 const App = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  );
 };
 
 export default App;
