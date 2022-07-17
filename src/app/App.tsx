@@ -1,7 +1,7 @@
-import './App.css';
+import { Header } from '../layout';
 
 const App = () => {
-  return <div>Hello World!!</div>;
+  return <Header />;
 };
 
 export default App;
