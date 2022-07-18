@@ -2,7 +2,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const Main: React.FC<Props> = ({ children }: Props) => {
+const Main: React.FC<Props> = ({ children }) => {
   return <main>{children}</main>;
 };
 
