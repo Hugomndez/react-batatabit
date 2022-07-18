@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-const Date = () => {
+const useDate = () => {
   const [date, setDate] = useState('');
 
   const showDate = () => {
@@ -8,15 +8,14 @@ const Date = () => {
     const options = { dateStyle: 'short' };
     // @ts-ignore
     const date = event.toLocaleString('en', options);
-    return;
+    setDate(date);
   };
 
   useEffect(() => {
     showDate();
-    console.log(date);
   }, []);
 
-  return <span>{date}</span>;
+  return date;
 };
 
-export default Date;
+export default useDate;

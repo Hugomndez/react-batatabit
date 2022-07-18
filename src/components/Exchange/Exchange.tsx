@@ -1,22 +1,10 @@
-import { useEffect, useState } from 'react';
 import trendingDown from '../../assets/icons/trending-down.svg';
 import trendingUp from '../../assets/icons/trending-up.svg';
 import bitcoin from '../../assets/images/bitcoin.svg';
+import { useDate } from '../../hooks';
 
 const Exchange = () => {
-  const [date, setDate] = useState('');
-
-  const showDate = () => {
-    const event = new Date();
-    const options = { dateStyle: 'short' };
-    // @ts-ignore
-    const date = event.toLocaleString('en', options);
-    setDate(date);
-  };
-
-  useEffect(() => {
-    showDate();
-  }, []);
+  const date = useDate();
 
   return (
     <section className='main-exchange-container'>
